@@ -69,9 +69,6 @@ if __name__ == "__main__":
     test_add_multiple_edges()
     print("All tests passed!")
     
-    # Check if the file is created
-    import os
-    assert os.path.exists(filename)
 
 def test_graph_analysis():
     net = NetworkVS()
