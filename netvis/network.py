@@ -2,12 +2,12 @@ from pyvis.network import Network
 import networkx as nx
 from IPython.display import display, HTML
 from browser import display_html
-
+import pandas as pd
 class NetworkVS(Network):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.net = nx.Graph()
-
+    legend = list()
     def add_node(self, node, **attr):
         self.net.add_node(node, **attr)
 
@@ -22,7 +22,87 @@ class NetworkVS(Network):
             'degree_centrality': nx.degree_centrality(self.net),
             'clustering_coefficient': nx.clustering(self.net)
         }
-
+    #' Add a legend on a Graph object
+    #' 
+    #' @param graph : a graph object
+    #' @param enabled : Boolean. Default to TRUE.
+    #' @param useGroups : use groups options in legend ? Default to TRUE.
+    #' @param addNodes : a data.frame or a list for adding custom node(s)
+    #' @param addEdges : a data.frame or a list for adding custom edges(s)
+    #' @param width : Number, in [0,...,1]. Default to 0.2
+    #' @param position : one of "left" (Default) or "right"
+    #' @param main : For add a title. Character or a named list.
+    def VisLegend(self, enabled=True, useGroups=True, addNodes=None, addEdges=None, width=0.2, position="left", main=None, ncol=1, stepX=100, stepY=100, zoom=True):
+         if(enabled):
+            # initialize legend vaariable as an empty list
+            legend = list()
+            if not (0 <= width <= 1):
+                raise ValueError("'width' must be between 0 and 1")
+            legend['width'] = width
+            
+            if not isinstance(useGroups, bool):
+                raise ValueError("useGroups must be logical (True/False)")
+            legend['useGroups'] = useGroups
+            
+            if position not in ["left", "right"]:
+                raise ValueError("position must be one of 'left' or 'right'")
+            legend['position'] = position
+            
+            if not isinstance(ncol, int) or ncol < 1:
+                raise ValueError("ncol must be an integer >= 1")
+            legend['ncol'] = ncol
+            
+            legend['stepX'] = stepX
+            legend['stepY'] = stepY
+            
+            legend['zoom'] = zoom
+            
+            if addEdges is not None:
+                legend['edges'] = addEdges
+                if isinstance(addEdges, pd.DataFrame):
+                    legend['edgesToDataframe'] = True
+                elif isinstance(addEdges, list):
+                    legend['edgesToDataframe'] = True
+                else:
+                    raise ValueError("addEdges must be a pandas DataFrame or a list")
+            if addNodes is not None:
+                legend['nodes'] = addNodes
+                if isinstance(addNodes, pd.DataFrame):
+                    legend['nodesToDataframe'] = True
+                elif isinstance(addNodes, list):
+                    legend['nodesToDataframe'] = False
+                else:
+                    raise ValueError("addNodes must be a pandas DataFrame or a list")
+             # main
+            if main is not None:
+                if isinstance(main, dict):
+                    if any(key not in ["text", "style"] for key in main.keys()):
+                        raise ValueError("Invalid 'main' argument")
+                    if "text" not in main:
+                        raise ValueError("Needed a 'text' value using a list for 'main'")
+                    if "style" not in main:
+                        main["style"] = 'font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:14px;text-align:center;'
+                elif not isinstance(main, str):
+                    raise ValueError("Invalid 'main' argument. Not a character")
+                else:
+                    main = {
+                        "text": main,
+                        "style": 'font-family:Georgia, Times New Roman, Times, serif;font-weight:bold;font-size:14px;text-align:center;'
+                    }
+                legend["main"] = main
+            self.legend = legend
+                    
+            
+            return """
+            <div style="position: absolute; right: 0; top: 0; z-index: 1000; background-color: white; padding: 10px; border: 1px solid black;">
+                <h3>Legend</h3>
+                <ul>
+                    <li><span style="color: red;">Red</span> - High Degree Centrality</li>
+                    <li><span style="color: green;">Green</span> - Low Degree Centrality</li>
+                </ul>
+            </div>
+            """
+        
     class Graph(Network):
         def __init__(self, notebook=False):
             super().__init__(notebook=notebook)
