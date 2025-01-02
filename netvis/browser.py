@@ -12,4 +12,4 @@ def display_html(file_path):
 if __name__ == "__main__":
     # Path to your HTML file
     file_path = "network.html"
-    open_html_file(file_path)
+    display_html(file_path)

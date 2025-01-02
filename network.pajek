@@ -1,0 +1,55 @@
+*vertices 20
+1 1 0.0 0.0 dot group undefined label "Node 1" degree_centrality 0.2631578947368421
+2 2 0.0 0.0 dot group undefined label "Node 2" degree_centrality 0.2631578947368421
+3 3 0.0 0.0 dot group undefined label "Node 3" degree_centrality 0.3157894736842105
+4 4 0.0 0.0 dot group undefined label "Node 4" degree_centrality 0.05263157894736842
+5 5 0.0 0.0 dot group undefined label "Node 5" degree_centrality 0.15789473684210525
+6 6 0.0 0.0 dot group undefined label "Node 6" degree_centrality 0.15789473684210525
+7 7 0.0 0.0 dot group undefined label "Node 7" degree_centrality 0.0
+8 8 0.0 0.0 dot group undefined label "Node 8" degree_centrality 0.10526315789473684
+9 9 0.0 0.0 dot group undefined label "Node 9" degree_centrality 0.21052631578947367
+10 10 0.0 0.0 dot group undefined label "Node 10" degree_centrality 0.15789473684210525
+11 11 0.0 0.0 dot group undefined label "Node 11" degree_centrality 0.10526315789473684
+12 12 0.0 0.0 dot group undefined label "Node 12" degree_centrality 0.2631578947368421
+13 13 0.0 0.0 dot group undefined label "Node 13" degree_centrality 0.10526315789473684
+14 14 0.0 0.0 dot group undefined label "Node 14" degree_centrality 0.3157894736842105
+15 15 0.0 0.0 dot group undefined label "Node 15" degree_centrality 0.10526315789473684
+16 16 0.0 0.0 dot group undefined label "Node 16" degree_centrality 0.21052631578947367
+17 17 0.0 0.0 dot group undefined label "Node 17" degree_centrality 0.21052631578947367
+18 18 0.0 0.0 dot group undefined label "Node 18" degree_centrality 0.2631578947368421
+19 19 0.0 0.0 dot group undefined label "Node 19" degree_centrality 0.10526315789473684
+20 20 0.0 0.0 dot group undefined label "Node 20" degree_centrality 0.10526315789473684
+*edges
+1 10 1.0 strength 2 confidence 2.1115806419799266 from 10 to 1 arrows to color "rgba(0, 255, 0, 1)" width 6
+1 19 1.0 strength -3 confidence 0.67991805314359 from 19 to 1 arrows to color "rgba(255, 0, 0, 1)" width 9
+1 17 1.0 strength -3 confidence 8.482618138797848 from 1 to 17 arrows to color "rgba(255, 0, 0, 1)" width 9
+1 5 1.0 strength 3 confidence 4.386967945015025 from 1 to 5 arrows to color "rgba(0, 255, 0, 1)" width 9
+1 2 1.0 strength 3 confidence 5.476346395244741 from 2 to 1 arrows to color "rgba(0, 255, 0, 1)" width 9
+2 9 1.0 strength -4 confidence 5.0505046546855965 from 9 to 2 arrows to color "rgba(255, 0, 0, 1)" width 12
+2 10 1.0 strength 4 confidence 1.7834187430872328 from 2 to 10 arrows to color "rgba(0, 255, 0, 1)" width 12
+2 5 1.0 strength -1 confidence 0.5145341073378185 from 5 to 2 arrows to color "rgba(255, 0, 0, 0.7718011610067277)" width 3
+2 18 1.0 strength 4 confidence 9.78392954070295 from 18 to 2 arrows to color "rgba(0, 255, 0, 1)" width 12
+3 9 1.0 strength -2 confidence 9.085592238154979 from 9 to 3 arrows to color "rgba(255, 0, 0, 1)" width 6
+3 16 1.0 strength 4 confidence 2.700244807624137 from 16 to 3 arrows to color "rgba(0, 255, 0, 1)" width 12
+3 14 1.0 strength 1 confidence 0.30020002165133564 from 14 to 3 arrows to color "rgba(0, 255, 0, 0.45030003247700345)" width 3
+3 15 1.0 strength 4 confidence 8.52545540449243 from 3 to 15 arrows to color "rgba(0, 255, 0, 1)" width 12
+3 18 1.0 strength -3 confidence 1.7039371589953045 from 3 to 18 arrows to color "rgba(255, 0, 0, 1)" width 9
+3 17 1.0 strength 5 confidence 5.62770340198845 from 17 to 3 arrows to color "rgba(0, 255, 0, 1)" width 15
+4 16 1.0 strength -3 confidence 3.0081496251376127 from 16 to 4 arrows to color "rgba(255, 0, 0, 1)" width 9
+5 18 1.0 strength -5 confidence 7.3027539388598175 from 5 to 18 arrows to color "rgba(255, 0, 0, 1)" width 15
+6 20 1.0 strength 5 confidence 1.6303508633637875 from 20 to 6 arrows to color "rgba(0, 255, 0, 1)" width 15
+6 14 1.0 strength -3 confidence 6.658946266453254 from 6 to 14 arrows to color "rgba(255, 0, 0, 1)" width 9
+6 17 1.0 strength -2 confidence 9.018397058231763 from 6 to 17 arrows to color "rgba(255, 0, 0, 1)" width 6
+8 16 1.0 strength 4 confidence 9.89859630152672 from 16 to 8 arrows to color "rgba(0, 255, 0, 1)" width 12
+8 12 1.0 strength -1 confidence 9.61004636286683 from 8 to 12 arrows to color "rgba(255, 0, 0, 1)" width 3
+9 12 1.0 strength 5 confidence 3.456459966301475 from 9 to 12 arrows to color "rgba(0, 255, 0, 1)" width 15
+9 18 1.0 strength 1 confidence 1.3008622759958988 from 18 to 9 arrows to color "rgba(0, 255, 0, 1)" width 3
+10 19 1.0 strength -1 confidence 5.0899534263187265 from 19 to 10 arrows to color "rgba(255, 0, 0, 1)" width 3
+11 18 1.0 strength -1 confidence 9.93847199874962 from 11 to 18 arrows to color "rgba(255, 0, 0, 1)" width 3
+11 14 1.0 strength 5 confidence 0.04420991496634441 from 14 to 11 arrows to color "rgba(0, 255, 0, 0.1)" width 15
+12 15 1.0 strength -1 confidence 4.06323222595784 from 12 to 15 arrows to color "rgba(255, 0, 0, 1)" width 3
+12 12 1.0 strength -5 confidence 0.9256103670156923 from 12 to 12 arrows to color "rgba(255, 0, 0, 1)" width 15
+13 16 1.0 strength -1 confidence 6.316033406184526 from 16 to 13 arrows to color "rgba(255, 0, 0, 1)" width 3
+13 14 1.0 strength -1 confidence 6.702071047311355 from 13 to 14 arrows to color "rgba(255, 0, 0, 1)" width 3
+14 17 1.0 strength 0 confidence 0.8483830547636295 from 17 to 14 arrows to color "rgba(0, 0, 0, 1)" width 1
+14 20 1.0 strength 0 confidence 5.605336930456777 from 20 to 14 arrows to color "rgba(0, 0, 0, 1)" width 1
